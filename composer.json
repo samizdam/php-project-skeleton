@@ -1,0 +1,19 @@
+{
+    "name": "vendor-name/project-name",
+    "description": "",
+    "license": "BSD-2-Clause",
+    "authors": [],
+    "require-dev": {
+        "phpunit/phpunit": "^9.0"
+    },
+    "autoload": {
+    	"psr-4": {
+    		"VendorName\\ProjectName\\": "src/VendorName/ProjectName"
+    	}
+    },
+    "autoload-dev": {
+    	"psr-4": {
+    		"VendorName\\ProjectName\\": "tests/VendorName/ProjectName"
+    	}
+    }
+}

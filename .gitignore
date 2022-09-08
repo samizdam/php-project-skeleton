@@ -1,0 +1,16 @@
+# IDE
+.settings/
+.idea/
+.project
+.buildpath
+
+# Local
+.env
+
+# PHPUnit
+.phpunit.result.cache
+phpunit.xml
+tests/_coverage
+
+# composer
+vendor/

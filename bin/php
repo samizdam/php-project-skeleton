@@ -1,0 +1,12 @@
+#!/bin/bash
+
+source .env
+
+test -t 1 && USE_TTY="--tty"
+
+docker run --rm --interactive ${USE_TTY} \
+    --init \
+    --user `id -u`:`id -g` \
+    --volume $PWD:/var/www \
+    --env-file .env \
+    ${PHP_DEV_IMAGE}:${REVISION} php "$@"
