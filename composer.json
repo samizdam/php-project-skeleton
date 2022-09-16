@@ -1,5 +1,5 @@
 {
-    "name": "vendor-name/project-name",
+    "name": "samizdam/skeleton",
     "description": "",
     "license": "BSD-2-Clause",
     "authors": [],
@@ -8,12 +8,12 @@
     },
     "autoload": {
     	"psr-4": {
-    		"VendorName\\ProjectName\\": "src/VendorName/ProjectName"
+            "Samizam\\Skeleton\\": "src/Samizdam/Skeleton"
     	}
     },
     "autoload-dev": {
     	"psr-4": {
-    		"VendorName\\ProjectName\\": "tests/VendorName/ProjectName"
+            "Samizdam\\Skeleton\\": "tests/Samizdam/Skeleton"
     	}
     }
 }
