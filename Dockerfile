@@ -1,4 +1,4 @@
-FROM php:8.1-cli
+FROM php:8.3-cli
 
 # Composer requirements begin
 RUN apt-get update \
