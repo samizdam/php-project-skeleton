@@ -1,13 +1,13 @@
-PATH := $(shell pwd)/bin:$(PATH)
-$(shell cp --update=none dev.env .env)
-include .env
+ENV_FILE=-.env
+-include $(ENV_FILE:-.env)
 
 install: build
 	composer install
 	cp -n phpunit.xml.dist phpunit.xml
 
-build:
+build-docker:
 	docker build -t $(PHP_DEV_IMAGE):$(REVISION) .
 
 test:
 	php vendor/bin/phpunit
+
