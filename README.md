@@ -19,3 +19,12 @@ PATH=$(pwd)/bin:$PATH
 make install
 make test
 ```
+
+Репозиторий использует feature based git flow. 
+
+Каждая ветка с префиксом feat/ содержит скелетон определённой направленности. 
+
+main всегда остаётся минималистичным. 
+
+Для навигации по имеющимся веткам можно смотреть отмеченные PR: https://github.com/samizdam/php-project-skeleton/pulls?q=is%3Aopen+is%3Apr+label%3A%22feature+branch%22
+
