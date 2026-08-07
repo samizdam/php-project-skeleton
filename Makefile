@@ -9,4 +9,5 @@ install:
 	cp -n phpunit.xml.dist phpunit.xml
 
 test:
-	php vendor/bin/phpunit
+	vendor/bin/phpunit
+
