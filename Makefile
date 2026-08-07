@@ -1,5 +1,5 @@
-ENV_FILE=-.env
--include $(ENV_FILE:-.env)
+ENV_FILE ?= .env
+-include $(ENV_FILE)
 
 build-docker:
 	docker build -t $(PHP_DEV_IMAGE):$(REVISION) .
