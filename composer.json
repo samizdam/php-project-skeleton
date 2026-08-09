@@ -14,7 +14,8 @@
         "symfony/console": "^8.1"
     },
     "require-dev": {
-        "phpunit/phpunit": "*"
+        "phpunit/phpunit": "*",
+        "rector/rector": "^2.6"
     },
     "autoload": {
         "psr-4": {
