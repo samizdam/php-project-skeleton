@@ -11,3 +11,7 @@ install:
 test:
 	vendor/bin/phpunit
 
+change-vendor:
+	jq '.name = "$(COMPOSER_PKG_NAME)"' composer.json > composer.json
+
+
