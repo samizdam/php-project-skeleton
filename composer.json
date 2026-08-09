@@ -10,7 +10,8 @@
         }
     ],
     "require": {
-        "free-elephants/di": "^4.2"
+        "free-elephants/di": "^4.2",
+        "symfony/console": "^8.1"
     },
     "require-dev": {
         "phpunit/phpunit": "*"
