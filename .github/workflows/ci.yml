@@ -31,7 +31,7 @@ jobs:
         uses: shivammathur/setup-php@v2
         with:
           php-version: ${{ matrix.php }}
-
+          ini-values: display_errors=On, display_startup_errors=On, error_reporting=-1, zend.assertions=1 # stable phpunit reqs
       - name: Check PHP Version
         run: php -v
 
