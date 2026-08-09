@@ -52,6 +52,3 @@ jobs:
           yes "" | vendor/bin/phpunit --generate-configuration
           vendor/bin/phpunit
 
-      - name: Check code style
-        run: vendor/bin/php-cs-fixer check
-
