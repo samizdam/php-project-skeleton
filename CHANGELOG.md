@@ -7,7 +7,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
-# Changed
+## Added
+- `make change-vendor` for change vendor in composer.json after / befor installation from dotenv
+
+### Chanded
 - Executable bin/ scripts dotenv and vars usage
 
 ## [1.0.0-beta] - 2026-08-09
@@ -17,4 +20,3 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - All files for make-first and dockerized workflow
 
 [Unreleased]: https://github.com/samizdam/php-project-skeleton/compare/1.0.0-beta...HEAD
-
