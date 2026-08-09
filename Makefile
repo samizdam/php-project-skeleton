@@ -4,9 +4,9 @@ ENV_FILE ?= .env
 build-docker:
 	docker build -t $(PHP_DEV_IMAGE):$(REVISION) .
 
-install: 
+install:
 	composer install
-	cp -n phpunit.xml.dist phpunit.xml
+	vendor/bin/phpunit --generate-configuration
 
 test:
 	vendor/bin/phpunit

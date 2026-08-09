@@ -1,12 +1,13 @@
 #!/bin/bash
 
-source .env
+ENV_FILE=${ENV_FILE:-.env}
 
-test -t 1 && USE_TTY="--tty"
+source ${ENV_FILE}
 
-docker run --rm --interactive ${USE_TTY} \
+docker run --rm --interactive \
     --init \
     --user `id -u`:`id -g` \
-    --volume $PWD:/var/www \
-    --env-file .env \
+    --volume $PWD:$WORKDIR \
+    --env-file ${ENV_FILE} \
     ${PHP_DEV_IMAGE}:${REVISION} php "$@"
+

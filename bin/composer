@@ -1,6 +1,8 @@
 #!/bin/bash
 
-source .env
+ENV_FILE=${ENV_FILE:-.env}
+
+source ${ENV_FILE}
 
 mkdir -p $HOME/.composer/cache/
 
@@ -9,7 +11,8 @@ test -t 1 && USE_TTY="--tty"
 docker run --rm --interactive ${USE_TTY} \
     --init \
     --user `id -u`:`id -g` \
-    --volume $PWD:/var/www \
+    --volume $PWD:$WORKDIR \
     --volume $HOME/.composer:/tmp/.composer \
     --env COMPOSER_HOME=/tmp/.composer \
     ${PHP_DEV_IMAGE}:${REVISION} composer "$@"
+
