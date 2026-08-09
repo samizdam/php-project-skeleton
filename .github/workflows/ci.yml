@@ -13,6 +13,7 @@ jobs:
           - 8.5
         include:
           - php: nightly
+            prefer: stable
             experimental: true
         prefer:
           - lowest
