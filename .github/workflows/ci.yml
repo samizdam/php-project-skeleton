@@ -48,7 +48,7 @@ jobs:
         run: composer update --prefer-${{ matrix.prefer }} --prefer-dist --no-progress
 
       - name: Run tests
-        run:
+        run: |
           yes "" | vendor/bin/phpunit --generate-configuration
           vendor/bin/phpunit
 
