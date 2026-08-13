@@ -1,4 +1,6 @@
-FROM php:8.4-cli
+ARG PHP_VERSION=8.5
+
+FROM php:${PHP_VERSION}-cli
 
 # Composer requirements begin
 RUN apt-get update \
