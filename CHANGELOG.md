@@ -7,10 +7,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
-## Added
-- `make change-vendor` for change vendor in composer.json after / befor installation from dotenv
+### Added
+- `make change-vendor` for change vendor in composer.json after / before installation from dotenv
 
-### Chanded
+### Changed
 - Executable bin/ scripts dotenv and vars usage
 
 ## [1.0.0-beta] - 2026-08-09

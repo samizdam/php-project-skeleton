@@ -12,6 +12,7 @@ test:
 	vendor/bin/phpunit
 
 change-vendor:
-	jq '.name = "$(COMPOSER_PKG_NAME)"' composer.json > composer.json
+	jq --indent 4 ".name = \"$(COMPOSER_PKG_NAME)\"" composer.json > composer.json.tmp
+	mv composer.json.tmp composer.json
 
 
