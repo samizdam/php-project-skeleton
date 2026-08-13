@@ -7,6 +7,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Added
+- `PHP_VERSION` var support
+
+### Changed
+- Default `REVISION` for docker env is `main`
+
 ## [1.0.0-beta.2] - 2026-08-12
 
 ### Added
