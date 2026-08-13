@@ -8,7 +8,7 @@
 ## Установка и настройка
 
 ```bash
-git clone git@github.com:samizdam/php-project-skeleton.git --origin=skeleton super-poject-name && cd super-poject-name
+git clone git@github.com:samizdam/php-project-skeleton.git --origin=skeleton --no-tags super-poject-name && cd super-poject-name
 
 # Optional: if your want some "meat", not only bare bones, checkout to favorite branch. 
 # For example, start with included di:
