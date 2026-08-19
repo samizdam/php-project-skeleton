@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.0.0-beta.3] - 2026-08-19
+
 ### Added
 - `PHP_VERSION` var support
 
@@ -27,7 +29,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - All files for make-first and dockerized workflow
 
-[Unreleased]: https://github.com/samizdam/php-project-skeleton/compare/1.0.0-beta.2...HEAD
+[Unreleased]: https://github.com/samizdam/php-project-skeleton/compare/1.0.0-beta.3...HEAD
+[1.0.0-beta.3]: https://github.com/samizdam/php-project-skeleton/compare/1.0.0-beta.2...1.0.0-beta.3
 [1.0.0-beta.2]: https://github.com/samizdam/php-project-skeleton/compare/1.0.0-beta...1.0.0-beta.2
 [1.0.0-beta]: https://github.com/samizdam/php-project-skeleton/releases/tag/1.0.0-beta
-
