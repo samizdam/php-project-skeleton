@@ -2,7 +2,7 @@ ENV_FILE ?= .env
 -include $(ENV_FILE)
 
 build-docker:
-	docker build -t $(PHP_DEV_IMAGE):$(REVISION) .
+	docker build --build-arg PHP_VERSION=$(PHP_VERSION) -t $(PHP_DEV_IMAGE):$(REVISION) .
 
 install:
 	composer install
@@ -14,5 +14,3 @@ test:
 change-vendor:
 	jq --indent 4 ".name = \"$(COMPOSER_PKG_NAME)\"" composer.json > composer.json.tmp
 	mv composer.json.tmp composer.json
-
-
