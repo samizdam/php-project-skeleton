@@ -1,0 +1,36 @@
+name: Featured Branches update
+
+on:
+  release:
+    types: [released]
+
+permissions:
+  contents: write
+
+jobs:
+  sync-branches:
+    strategy:
+      matrix:
+        branch:
+          - feat/di
+          - feat/cli-symfony
+
+    name: Update all branches with released tag
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6
+        with:
+          fetch-depth: 0
+
+      - name: Setup Git User
+        run: |
+          git config user.name "GitHub Action"
+          git config user.email "samizdam+github-action@gmail.com"
+
+      - name: Update ${{ matrix.branch }} Branch
+        run: |
+          git checkout ${{ matrix.branch }}
+          git merge ${{ github.ref_name }}
+          git push origin ${{ matrix.branch }}
