@@ -1,0 +1,42 @@
+name: Featured Branches update
+
+on:
+  release:
+    types: [prereleased] # TODO replace with released
+
+
+permissions:
+  contents: write
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6
+        with:
+          fetch-depth: 0
+
+      - name: Setup Git User
+        run: |
+          git config user.name "GitHub Action"
+          git config user.email "samizdam+github-action@gmail.com"
+
+      - name: Update test Branch
+        run: |
+          git checkout test
+          git merge ${GITHUB_REF_NAME}
+          git push origin feat/di
+
+
+#      - name: Update feat/di Branch
+#        run: |
+#          git checkout feat/di
+#          git merge origin/main
+#          git push origin feat/di
+#
+#      - name: Update feat/cli-symfony Branch
+#        run: |
+#          git checkout feat/di
+#          git merge origin/main
+#          git push origin feat/di
