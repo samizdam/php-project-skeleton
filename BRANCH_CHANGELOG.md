@@ -9,5 +9,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 - free-elephants/di pkg
+- symfony/console pkg
+- rector/rector dev pkg
 
-[Unreleased]: https://github.com/samizdam/php-project-skeleton/compare/HEAD...feat/di
+[Unreleased]: https://github.com/samizdam/php-project-skeleton/compare/HEAD...feat/cli-symfony

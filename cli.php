@@ -7,6 +7,8 @@ use Symfony\Component\Console\Application as SymfonyApp;
 
 $components = require __DIR__ . '/config/components.php';
 $di = (new \FreeElephants\DI\InjectorBuilder)->buildFromArray($components);
+$di->allowInstantiateNotRegisteredTypes(true);
+$di->registerItSelf();
 
 $app = $di->get(Application::class);
 
