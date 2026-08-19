@@ -14,6 +14,10 @@ RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local
 
 # Composer requirements end
 
+# Phpunit dev ini values begin
+RUN echo "memory_limit=-1" >> $PHP_INI_DIR/conf.d/phpunit.ini
+# Phpunit dev ini values end
+
 # Prepare image filesystem begin
 WORKDIR /var/www
 # Prepare image filesystem end
